@@ -17,7 +17,7 @@ class SystemToolTime(Resource):
         ##url = "http://" + os.environ['APP'] + "-system-time:10002/time"
         #url = "http://" + os.environ['APP'] + "-system-time"
         
-        ms_json = eval(redis_db.get('SYSTEM-TIME-DSK'))
+        ms_json = eval(redis_db.get('DSKM2112D'))
         url = str(ms_json["10002"])
         headers = {            
             'API-KEY': redis_db.get('API-KEY')
