@@ -17,7 +17,7 @@ class SystemToolTime(Resource):
         ##url = "http://" + os.environ['APP'] + "-system-time:10002/time"
         #url = "http://" + os.environ['APP'] + "-system-time"
         
-        ms_json = eval(redis_db.get('SYSTEM-TIME-1513'))
+        ms_json = eval(redis_db.get('SYSTEM-TIME-DSK'))
         url = str(ms_json["10002"])
         headers = {            
             'API-KEY': redis_db.get('API-KEY')
@@ -31,7 +31,7 @@ class SystemToolUpTime(Resource):
     def get(self):
         ##url = "http://" + os.environ['APP'] + "-system-uptime:10004/uptime"
         #url = "http://" + os.environ['APP'] + "-system-uptime"
-        ms_json = eval(redis_db.get('SYSTEM-UPTIME-1512'))
+        ms_json = eval(redis_db.get('SYSTEM-UPTIME-DSK'))
         url = str(ms_json["10004"])
         headers = {            
             'API-KEY': redis_db.get('API-KEY')
